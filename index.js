@@ -13,11 +13,12 @@
             "x-rapidapi-key": "c3cb763422msh7a8508c1df6135bp182a5fjsnbd6adf946048"
           }
             }).then(res => res.json()).then(data =>{
+                
+                display.innerHTML = ''
                 data.forEach((x) => {
 
-                    let h1 = document.createElement('h1');
+                let h1 = document.createElement('h1');
                 if(x.region == regX){
-                    console.log(regX)
                         h1.innerHTML = x.name;
                         display.appendChild(h1);
                     }
